@@ -1,0 +1,226 @@
+:root {
+    --dark: #1F2E55;
+    --medium: #717FA6;
+    --light: #F7F9FF;
+    --lightist: #FFFFFF;
+    --light-color: #E0E8FF;
+    --medium-color: #D6E1FF;
+    --dark-color: #382AE1;
+    --accent-color: #766CF1;
+    --bg-color-1:#D6E1FF;
+    --bg-color-2:#E0E8FF;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+
+
+
+/*Once the view width gets larger that 1400 px the body element should match the width of the view width.*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.625rem;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    line-height: 2.3125rem;
+}
+
+body {
+    background: url(images/pattern-background-desktop.svg); /*https://css-tricks.com/almanac/properties/b/background-size/*/
+    background-size: 1400px;
+    background-repeat: no-repeat;
+    background-color: var(--bg-color-2);
+    background-position: top center;
+}
+
+div.card {
+    width: 28.125rem;
+    background: url(images/illustration-hero.svg);
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-color: var(--lightist);
+    margin:0 auto;
+    border-radius: 20px;
+    margin-top: 6.375rem;
+    padding-top: 16.5625rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}   
+
+div.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    text-align: center;
+    line-height: 1.625rem;
+}
+
+a {
+    color: var(--dark-color);
+    text-decoration:none;
+
+}
+
+a:hover {
+    color: var(--accent-color)
+}
+
+.summary {
+    display:block;
+    background-color: var(--light);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    width:100%;
+    border-radius: 11px;
+}
+
+.pitch {
+    margin-bottom: 1.25rem;
+    color:var(--medium);
+}
+
+.summary > * {
+    display: inline-block;
+}
+
+.first-group,
+.second-group {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plan, #notes, #change{
+    flex-shrink: 0; /* https://stackoverflow.com/questions/18340154/prevent-wrapping-lines-in-flexbox-child-element */
+}
+
+#notes {
+    margin-right: 1.25rem;
+}
+
+.plan {
+    text-align: left;
+}
+.black {
+    font-weight: 900;
+}
+.price {
+    color:var(--medium)
+}
+
+#change {
+    font-weight:700;
+    font-size: .875rem;
+    border-bottom: .125rem solid var(--dark-color);
+}
+
+#change:hover {
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+#proceed {
+    width: 100%;
+    height:3.125rem;
+    background-color: var(--dark-color);
+    border-radius: 11px;
+    text-align: center;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+    color:var(--lightist);
+    box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+    margin-bottom: 2rem;
+    font-weight: 900;
+}
+
+#proceed:hover{
+    background-color:var(--accent-color)
+
+}
+
+#cancel {
+    font-size: .9375rem;
+    margin-bottom: 3rem;
+    color:var(--medium);
+    font-weight:900;
+}
+
+#cancel:hover {
+    color:var(--dark);
+}
+
+/*less than 500 px, adjusted design */
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    body {
+        background-size: 640px;
+    }
+
+    h1 {
+        font-size: 22px;
+        line-height: 29px;
+    }
+
+    div.card {
+        width:327px;
+        padding-top: 12.8rem;
+        margin-top: 4.733rem;
+        padding-left: 1.61rem;
+        padding-right: 1.61rem;
+    }
+
+    .plan, #notes, #change{
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .summary {
+        padding: 1.07rem;
+        margin-bottom: 1.6rem;
+    }
+
+    #change {font-size:13px; line-height: 17px;}
+
+    #proceed {
+        padding: .8rem;
+        margin-bottom: 1.6rem;
+    }
+
+    #cancel{
+        margin-bottom: 2.133rem;
+    }
+}
+
+/* larger than 1400 px, everything grows*/
+@media screen and (min-width: 1400px) {
+    html {
+        font-size: calc(16vw / 14); /* 16px to 16vw divided by breakpoint, in this case 1400px, I'm not 100% sure why this works, but it does! yay!) */
+    }
+    body {
+      background-size: 100%;
+    }
+ 
+    div.card {
+        width: 32.1%;
+    }
+
+}
