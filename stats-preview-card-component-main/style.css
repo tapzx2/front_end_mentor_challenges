@@ -1,0 +1,40 @@
+* {box-sizing: border-box; padding:0; margin: 0;}
+
+body {background-color: grey;}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 56px); /* smallest element is 56 px tall so making that the row height? And card height is 446 / 56  = 8 */
+    gap: 5px;
+    grid-template-areas:
+    ". . . . . . h h h h h h"
+    ". t t t t . h h h h h h"
+    ". t t t t . h h h h h h"
+    ". t t t t . h h h h h h"
+    ". t t t t . h h h h h h"
+    ". . . . . . h h h h h h"
+    ". s s s s . h h h h h h"
+    ". . . . . . h h h h h h";
+    max-width: 1110px;
+    max-height: 446px;
+}
+
+.hero {
+    grid-area: h;
+    height: 100%;
+    max-width: 540px;
+}
+
+.text {
+    background-color: green;;
+    grid-area: t;
+}
+
+.stats {
+    background-color: purple;
+    grid-area: s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
