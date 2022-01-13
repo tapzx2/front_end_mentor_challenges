@@ -1,0 +1,117 @@
+/* var colors */
+
+:root {
+    --teal: #4D96A9;
+    --medium-teal: #71C0D4;
+    --light-teal: #8FE3F9;
+    --purple: #855FB1;
+    --medium-purple: #B18BDD;
+    --light-purple: #D9B8FF;
+    --dark: #28283D;
+    --light: #FAFAFA;
+    --medium: #87879D;
+}
+
+/* reset */
+
+* { box-sizing: border-box; margin:0; padding:0 }
+
+/* font defaults from style sheet */
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap');
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+h1 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 64px;
+    color: var(--dark);
+}
+
+h2 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 44px;
+    color: var(--dark);
+}
+
+.overline {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--teal);
+}
+
+p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--medium);
+}
+
+/* standard buttons from style sheet */
+
+.button {
+    padding:16px 31px;
+    border-radius: 29px;
+    text-decoration:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:var(--light);
+    background-color: var(--dark);
+}
+
+.button-a, .button-b {
+    position:relative;
+    top:1px;
+}
+
+.button-a {
+    background-color: var(--teal);
+}
+
+span.button-a {
+    color: var(--light-teal)
+}
+
+.button-a:hover {
+    background-color: var(--medium-teal);
+}
+
+.button-b {
+    background-color: var(--purple);
+}
+
+span.button-b {
+    color: var(--light-purple)
+}
+
+.button-b:hover {
+    background-color: var(--medium-purple);
+}
+
+/* image overlay */
+
+.overlay {
+    background-color: var(--teal);
+}
+
+
+/* mobile first */
+
+/* element tests */
+
+.image-tile-container{
+    width: 327px;
+    height: 310px;
+}
