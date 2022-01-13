@@ -18,6 +18,8 @@ Front end mentor gives 2 designs for this (top left and bottom right). I though 
 
 ## 2. Sketch Changes
 
+![](PXL_20220113_162442840.jpg)
+
 ## 3. Markup + 4. Lynx
 
 Since there are 2 images for different widths, this seems to bethe perfect time to try CCS-Tricks' [A Guide to the Responsive Images Syntax in HTML](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture).
