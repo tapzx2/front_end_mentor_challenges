@@ -11,27 +11,37 @@
   https://www.freecodecamp.org/news/how-to-prototype-websites-quickly-with-css-grid-ffc9cba08583/
   actually... maybe next one. This seems too simple?-->
 <body>
-  <div class="container">
-    <img class="hero" src="images/image-header-desktop.jpg" alt="people working">
-    <div class="text">
-    <h1>Get insights that help your business grow.</h1>
+  <div class="container flex">
+    <picture class="hero">
+      <source 
+        srcset="images/image-header-desktop.jpg"
+        media="(min-width: 1100px)"
+      />
+      <img class="hero"
+        src="images/image-header-mobile.jpg" 
+        alt="people working"
+      />
+    </picture>
+    <div class="text-content flex">
+      <div class="pitch flex">
+      <h1>Get <span class="purple">insights</span> that help your business grow.</h1>
 
-    <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-    experience, and overall efficiency.</p>
-    </div>
-    <div class="stats">
-      <div class="stat">
-        10k+ companies
+      <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+        experience, and overall efficiency.</p>
       </div>
-      <div class="stat">
-        314 templates
+      <div class="stats flex">
+        <div class="stat">
+          <span class="highlight">10k+ </span><span class="micro">companies</span>
+        </div>
+        <div class="stat">
+          <span class="highlight">314 </span><span class="micro">templates</span>
+        </div>
+        <div class="stat">
+          <span class="highlight">12m+ </span><span class="micro">queries</span>
+        </div>
+
       </div>
-      <div class="stat">
-        12m+ queries
-      </div>
-    
-    
-    </div>
+    </div> 
   </div>
 </body>
 </html>
