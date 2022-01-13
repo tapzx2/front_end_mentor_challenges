@@ -50,6 +50,22 @@ p {
     opacity: 0.6;
 }
 
+picture {
+    position: relative;
+}
+.overlay {
+    position:absolute;
+    width: 100%;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:rgba(171, 92, 219, 1);
+    background-blend-mode: multiply;
+    mix-blend-mode: multiply;
+    z-index:2;
+}
+
 /* default layout */
 
 .flex {
