@@ -61,26 +61,29 @@ p {
 /* standard buttons from style sheet */
 
 .button {
-    padding:16px 31px;
+    padding:15px 31px;
     border-radius: 29px;
-    text-decoration:none;
     display: flex;
     justify-content: center;
     align-items: center;
     color:var(--light);
     background-color: var(--dark);
+    text-decoration: none;
+    width: min-content;
 }
 
-.button-a, .button-b {
+/*
+.button-a:active, .button-b:active {
     position:relative;
     top:1px;
 }
+*/
 
 .button-a {
     background-color: var(--teal);
 }
 
-span.button-a {
+span.a {
     color: var(--light-teal)
 }
 
@@ -92,7 +95,7 @@ span.button-a {
     background-color: var(--purple);
 }
 
-span.button-b {
+span.b {
     color: var(--light-purple)
 }
 
@@ -100,18 +103,126 @@ span.button-b {
     background-color: var(--medium-purple);
 }
 
-/* image overlay */
+/* second section (but no overlay) */
 
-.overlay {
-    background-color: var(--teal);
+.section2 {
+    width: 100%;
+    height: 428px;
+    background-color:var(--teal);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.section2 p,
+.section2 h2 {
+    color:var(--light);
+    max-width: 327px;
+    z-index: 99;
+}
+
+.section2 .button {
+    z-index: 99;
+}
+
+@media screen and (min-width: 1049px){
+    .section2 {
+        height: 308px;
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .section2 p {
+        max-width: 335px;
+    }
 }
 
 
-/* mobile first */
+/***** complicated elements that change ******/
+/*********************************************/
 
-/* element tests */
+    /* image tile */
 
 .image-tile-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    background-size: 20px;
     width: 327px;
     height: 310px;
+}
+
+.tile:nth-child(1) {
+    background-image: url(assets/desktop/image-woman-in-videocall.jpg);
+}
+.tile:nth-child(2){
+    background-image: url(assets/desktop/image-women-videochatting.jpg);
+}
+.tile:nth-child(3) {
+    background-image: url(assets/desktop/image-men-in-meeting.jpg);
+}
+.tile:nth-child(4) {
+    background-image: url(assets/desktop/image-man-texting.jpg);
+}
+
+.tile {
+    border-radius: 10px;
+    background-size:contain;
+}
+
+
+@media screen and (min-width: 561px){
+    body {
+    background-color: blue;
+    overflow: hidden;
+    }
+    .image-tile-container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 10px;
+        width: 689px;
+        height: 156px;
+    }
+}
+
+@media screen and (min-width: 1049px){
+    body {
+    background-color: green;
+    }
+
+    .image-tile-container{
+        gap: 10px;
+        width: 1110px;
+        height: 242px;
+    }
+}
+
+    /* second section image and overlay */
+
+.overlay {
+    background-image: url(assets/mobile/image-footer.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    opacity: 0.1045;
+    width:100%;
+    height:100%;
+    position: absolute;
+
+}
+
+@media screen and (min-width: 561px){
+    .overlay {
+        background-image: url(assets/tablet/image-footer.jpg);
+    }
+}
+
+@media screen and (min-width: 1049px){
+    .overlay {
+        background-image: url(assets/desktop/image-footer.jpg);
+        background-position: center;
+    }
 }
