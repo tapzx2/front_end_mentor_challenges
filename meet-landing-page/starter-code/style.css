@@ -24,6 +24,10 @@ body {
     font-family: 'Red Hat Display', sans-serif;
 }
 
+.content {
+    position: relative;
+}
+
 h1 {
     font-style: normal;
     font-weight: 900;
@@ -32,12 +36,22 @@ h1 {
     color: var(--dark);
 }
 
+h1.small {
+    font-size: 40px;
+    line-height: 44px;
+}
+
 h2 {
     font-style: normal;
     font-weight: 900;
     font-size: 40px;
     line-height: 44px;
     color: var(--dark);
+}
+
+h2.small {
+    font-size: 32px;
+    line-height: 36px;
 }
 
 .overline {
@@ -58,6 +72,38 @@ p {
     color: var(--medium);
 }
 
+p.small {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+@media screen and (min-width: 561px){
+    br.small {
+        display: none;
+    }
+
+    h2.small {
+        font-size: 40px;
+        line-height: 44px;
+    }
+}
+
+@media screen and (min-width: 1049px){
+    br.small {
+        display: none;
+    }
+
+    h1.small {
+        font-size: 64px;
+        line-height: 64px;
+    }
+
+    p.small {
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+
 /* standard buttons from style sheet */
 
 .button {
@@ -69,7 +115,7 @@ p {
     color:var(--light);
     background-color: var(--dark);
     text-decoration: none;
-    width: min-content;
+    width: max-content;
 }
 
 /*
@@ -102,6 +148,113 @@ span.b {
 .button-b:hover {
     background-color: var(--medium-purple);
 }
+
+/* logo */
+
+#logo {
+    display: block;
+    margin: 0 auto;
+    margin-top: 48px;
+    margin-bottom: 54px;
+}
+
+/* hero banner */
+.hero-container {
+    margin: 0 auto;
+    margin-bottom: 48px;
+    background-image: url(assets/desktop/image-hero-left.png), url(assets/desktop/image-hero-right.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: calc(100% - 50vw), calc(50vw + 16px);
+    width:100vw;
+    height:153px;
+    
+}
+@media screen and (min-width: 561px){
+    .hero-container {
+        height: 303px;
+    }
+
+}
+@media screen and (min-width: 1049px){
+    .hero-container{
+        height: 358px;
+        position: absolute;
+        background-position: calc(65% - 50vw), calc(50vw + 35%);
+    }
+}
+
+/* pitch 1 */
+
+.pitch1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    max-width: 330px;
+    height: 354px;
+    margin: 0 auto;
+}
+
+.pitch1 .text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 190px;
+}
+
+.pitch1 .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 132px;
+}
+
+@media screen and (min-width: 561px){
+
+    .pitch1 {
+        max-width: 497px;
+        height: 262px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .pitch1 .buttons {
+        margin: 0 auto;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 328px;
+        align-items: center;
+    }
+
+
+}
+/* pitch2 */
+
+.pitch2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 330px;
+    height: 284px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 561px){
+
+    .pitch2{
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: 613px;
+        height: 240px;
+    }
+}
+
+
+
 
 /* second section (but no overlay) */
 
@@ -148,25 +301,33 @@ span.b {
 
 .image-tile-container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 151px 151px;
     gap: 10px;
     background-size: 20px;
-    width: 327px;
+    width: 100vw;
     height: 310px;
+    margin-bottom: 64px;
 }
 
 .tile:nth-child(1) {
     background-image: url(assets/desktop/image-woman-in-videocall.jpg);
+    position: relative;
+    right: calc(100% - 50vw);
 }
 .tile:nth-child(2){
     background-image: url(assets/desktop/image-women-videochatting.jpg);
+    position: relative;
+    right: calc(100% - 50vw);
 }
 .tile:nth-child(3) {
     background-image: url(assets/desktop/image-men-in-meeting.jpg);
+    position: relative;
+    right: calc(100% - 50vw);
 }
 .tile:nth-child(4) {
     background-image: url(assets/desktop/image-man-texting.jpg);
+    position: relative;
+    right: calc(100% - 50vw);
 }
 
 .tile {
@@ -181,11 +342,31 @@ span.b {
     overflow: hidden;
     }
     .image-tile-container{
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
+        grid-template-columns: 164px 164px 164px 164px;
         gap: 10px;
-        width: 689px;
+        width: 100vw;
         height: 156px;
+        margin-bottom: 48px;
+    }
+    .tile:nth-child(1) {
+        position: relative;
+        right: unset;
+        right: calc(210% - 50vw);
+    }
+    .tile:nth-child(2){
+        position: relative;
+        right: unset;
+        right: calc(210% - 50vw);
+    }
+    .tile:nth-child(3) {
+        position: relative;
+        right: unset;
+        right: calc(210% - 50vw);
+    }
+    .tile:nth-child(4) {
+        position: relative;
+        right: unset;
+        right: calc(210% - 50vw);
     }
 }
 
@@ -195,10 +376,33 @@ span.b {
     }
 
     .image-tile-container{
+        grid-template-columns: 255px 255px 255px 255px;
         gap: 10px;
-        width: 1110px;
+        width: 100vw;
         height: 242px;
+        margin-bottom: 80px;
     }
+    .tile:nth-child(1) {
+        position: relative;
+        right: unset;
+        right: calc(205% - 50vw);
+    }
+    .tile:nth-child(2){
+        position: relative;
+        right: unset;
+        right: calc(205% - 50vw);
+    }
+    .tile:nth-child(3) {
+        position: relative;
+        right: unset;
+        right: calc(205% - 50vw);
+    }
+    .tile:nth-child(4) {
+        position: relative;
+        right: unset;
+        right: calc(205% - 50vw);
+    }
+
 }
 
     /* second section image and overlay */
