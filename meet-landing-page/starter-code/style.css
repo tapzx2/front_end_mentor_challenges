@@ -10,6 +10,7 @@
     --dark: #28283D;
     --light: #FAFAFA;
     --medium: #87879D;
+    --numerator: #D8D8D8;
 }
 
 /* reset */
@@ -181,6 +182,83 @@ span.b {
         height: 358px;
         position: absolute;
         background-position: calc(65% - 50vw), calc(50vw + 35%);
+        z-index:-10;
+    }
+}
+
+/* numerator icons */
+
+
+.vertical-line {
+    height: 84px;
+    width:1px;
+    border-left:1px solid var(--numerator);
+    margin: 0 auto;
+    margin-top: 64px;
+}
+
+.circle {
+    width: 56px;
+    height: 56px;
+    border: 1px solid var(--numerator);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: var(--medium);
+    margin-bottom: 64px;
+}
+
+.second-line {
+    margin-top: calc(64px - 28px);
+}
+
+.second-circle {
+    margin-bottom:0;
+    z-index: 200;
+    background-color:white;
+}
+
+.second-numerator{
+    position: relative;
+    top: 28px;
+    z-index: 200;
+}
+
+@media screen and (min-width: 561px){
+    .vertical-line {
+        margin-top: 80px;
+    }
+
+    .circle {
+        margin-bottom: 67px;
+    }
+
+    .second-line {
+        margin-top: calc(80px - 28px);
+    }
+
+    .second-circle {
+        margin-bottom:0;
+    }
+
+}
+@media screen and (min-width: 1049px){
+    .vertical-line {
+        margin-top: 110px;
+    }
+
+    .circle {
+        margin-bottom: 64px;
+    }
+
+    .second-line {
+        margin-top: calc(110px - 28px);
+    }
+
+    .second-circle {
+        margin-bottom:0;
     }
 }
 
@@ -274,11 +352,11 @@ span.b {
 .section2 h2 {
     color:var(--light);
     max-width: 327px;
-    z-index: 99;
+    z-index: 98;
 }
 
 .section2 .button {
-    z-index: 99;
+    z-index: 98;
 }
 
 @media screen and (min-width: 1049px){
@@ -338,7 +416,7 @@ span.b {
 
 @media screen and (min-width: 561px){
     body {
-    background-color: blue;
+    /*background-color: blue;*/
     overflow: hidden;
     }
     .image-tile-container{
@@ -372,7 +450,7 @@ span.b {
 
 @media screen and (min-width: 1049px){
     body {
-    background-color: green;
+    /*background-color: green;*/
     }
 
     .image-tile-container{
