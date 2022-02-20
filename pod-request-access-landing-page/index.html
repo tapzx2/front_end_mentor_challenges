@@ -31,11 +31,19 @@
           <img class="pod-icon" src="assets/desktop/google-podcasts.svg" />
           <img class="pod-icon" src="assets/desktop/pocket-casts.svg" />
         </div>
-        <form class="box" action="post">
-          <p>email address</p>
-          <p>Request Access</p>
+        <form novalidate class="box form" action="#">
+          <!--https://stackoverflow.com/questions/17808555/how-to-prevent-browser-trying-to-auto-validate-email-address-field-->
+          <input
+            class="form-input"
+            type="email"
+            name=""
+            id=""
+            placeholder="Email address"
+          />
+          <button class="request">Request Access</button>
         </form>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

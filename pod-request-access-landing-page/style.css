@@ -31,6 +31,8 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/env()
   --light: #ffffff;
   --dark: #121725;
 
+  --light-faded: rgba(255, 255, 255, 0.9);
+
   --mid-light: #c2cbe5;
   --mid-mid: #5a668a;
   --mid-dark: #2c344b;
@@ -189,6 +191,7 @@ p {
   display: flex;
   flex-direction: row;
   max-width: 375px;
+  margin-bottom: 48px;
 }
 
 .img-icons > img {
@@ -207,4 +210,47 @@ p {
 
 .pod-icon:nth-child(3) {
   padding-right: 16px;
+}
+
+/* form */
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  background-color: var(--mid-dark);
+  color: var(--light-faded);
+  border: 0;
+  border-radius: 28px;
+  height: 46px;
+  padding-left: 30px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 28px;
+  margin-bottom: 16px;
+}
+
+form input:focus {
+  outline: none;
+}
+
+.invalid:invalid {
+  background-color: red;
+}
+
+form button {
+  background-color: var(--highlight);
+  border: 0;
+  border-radius: 28px;
+  height: 46px;
+  font-size: 14px;
+  line-height: 28px;
+  color: var(--dark);
+}
+
+form button:hover {
+  background-color: var(--active);
+  cursor: pointer;
 }
