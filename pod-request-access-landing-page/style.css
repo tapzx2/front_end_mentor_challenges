@@ -9,6 +9,10 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/env()
 /* no i can't :(
 */
 
+/* ::before and ::after /*
+
+https://www.youtube.com/watch?v=zGiirUiWslI
+
 /* media query breaks
 700
 1440
@@ -54,7 +58,10 @@ body {
 
 @media screen and (min-width: 700px) {
   body {
-    background-color: blue;
+    background-color: var(--dark);
+    align-items: unset;
+    overflow: hidden;
+    padding-left: 40px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -92,12 +99,16 @@ p {
     font-size: 48px;
     line-height: 56px;
     margin-bottom: 31px;
+    padding-top: 93px;
   }
   p {
     font-size: 18px;
     line-height: 28px;
     text-align: left;
     margin-bottom: 40px;
+  }
+  .pitch {
+    width: 445px;
   }
 }
 
@@ -117,11 +128,17 @@ p {
 }
 
 @media screen and (min-width: 700px) {
-  .content :nth-child(3) {
+  .content > :nth-child(3) {
     order: 4;
   }
-  .content :nth-child(4) {
+  .content > :nth-child(4) {
     order: 3;
+  }
+  .content {
+    width: 635px;
+    height: 509px;
+    background-color: var(--dark);
+    margin-left: -25px;
   }
 }
 
@@ -150,15 +167,18 @@ p {
 }
 
 @media screen and (min-width: 700px) {
+  /*something here is really weird, that's what I get for playing with psuedo elements!*/
   .all-content {
     width: 635px;
     height: 717px;
     position: relative;
-    background-color: lightblue;
+    display: unset;
   }
 
   .all-content::before {
-    content: none;
+    content: unset;
+    width: unset;
+    height: unset;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -176,6 +196,18 @@ p {
   .flair {
     margin-top: 50px;
     margin-bottom: 152px;
+    position: relative;
+    margin-left: -25px;
+  }
+
+  .img-host {
+    width: 491px;
+    height: 768px;
+    background-image: url("assets/tablet/image-host.jpg");
+    position: absolute;
+    left: 228px;
+    top: -50px;
+    z-index: -100;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -212,11 +244,37 @@ p {
   padding-right: 16px;
 }
 
+@media screen and (min-width: 700px) {
+  .img-icons {
+    max-width: 536px;
+    max-height: 29px;
+  }
+
+  .img-icons > img {
+    height: 100%;
+  }
+
+  .pod-icon:nth-child(1) {
+    padding-right: 40px;
+  }
+
+  .pod-icon:nth-child(2) {
+    padding-right: 41px;
+  }
+
+  .pod-icon:nth-child(3) {
+    padding-right: 27px;
+  }
+}
+@media screen and (min-width: 1440px) {
+}
+
 /* form */
 
 .form {
   display: flex;
   flex-direction: column;
+  margin-bottom: 64px;
 }
 
 form input {
@@ -253,4 +311,65 @@ form button {
 form button:hover {
   background-color: var(--active);
   cursor: pointer;
+}
+
+@media screen and (min-width: 700px) {
+  .form {
+    flex-direction: row;
+    width: 427px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form-input {
+    width: 320px;
+    height: 56px;
+    margin-bottom: 0px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    position: relative;
+  }
+
+  .request {
+    width: 162px;
+    height: 46px;
+    box-sizing: content-box;
+    border: 5px solid var(--mid-dark);
+    position: relative;
+    transform-style: preserve-3d;
+  }
+
+  .request::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: var(--mid-dark);
+    top: -5px;
+    left: -6px;
+    height: 56px;
+    width: 100px;
+    transform: translateZ(
+      -1px
+    ); /* https://stackoverflow.com/questions/3032856/is-it-possible-to-set-the-stacking-order-of-pseudo-elements-below-their-parent-e */
+  }
+  .message {
+    position: relative;
+  }
+  .message::after {
+    position: absolute;
+    content: "Oops! Please check your email";
+    display: block;
+    position: absolute;
+    color: var(--alert);
+    top: 65px;
+    left: 30px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .invalid:invalid {
+    background-color: var(--mid-dark);
+  }
+}
+@media screen and (min-width: 1440px) {
 }
