@@ -60,13 +60,13 @@ body {
   body {
     background-color: var(--dark);
     align-items: unset;
-    overflow: hidden;
+    overflow-x: hidden;
     padding-left: 40px;
   }
 }
 @media screen and (min-width: 1440px) {
   body {
-    background-color: green;
+    background-color: var(--dark);
   }
 }
 
@@ -182,6 +182,12 @@ p {
   }
 }
 @media screen and (min-width: 1440px) {
+  .content {
+    width: 723px;
+  }
+  .all-content {
+    width: 723px;
+  }
 }
 
 /* logo and flair imgs */
@@ -209,11 +215,36 @@ p {
     top: -50px;
     z-index: -100;
   }
+
+  .bg-pattern-dots {
+    width: 232px;
+    height: 104px;
+    background-image: url(assets/desktop/bg-pattern-dots.svg);
+    position: absolute;
+    top: 900px;
+  }
 }
 @media screen and (min-width: 1440px) {
   .flair {
     margin-top: 102px;
     margin-bottom: 103px;
+  }
+
+  .img-host {
+    width: 888px;
+    height: 640px;
+    background-image: url("assets/desktop/image-host.jpg");
+    position: absolute;
+    left: 228px;
+    top: 24px;
+    z-index: -100;
+  }
+
+  .bg-pattern-dots {
+    background-image: url(assets/desktop/bg-pattern-dots.svg);
+    position: absolute;
+    top: 610px;
+    right: -375px;
   }
 }
 
