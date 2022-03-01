@@ -44,3 +44,7 @@ Background gradient:
 
 - Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
 - Weights: 400, 700
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;700;800&display=swap');
+</style>
