@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --dark: hsl(217, 19%, 35%);
+    --dark-alt: hsl(214, 17%, 51%);
+    --light:hsl(212, 23%, 69%);
+    --light-alt: hsl(210, 46%, 95%)
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+
+body {
+    font-size: 13px;
+    font-family: 'Manrope';
+}
+
+img {
+    width: 100%;
+}
+
+.head-line {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.pitch {
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 350px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.hero {
+    height: 225px;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.copy {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.author-card {
+    display: flex;
+    flex-direction: row;
+    --card-size: 55px;
+    height: var(--card-size);
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.author-card > img {
+    object-fit: contain;
+}
+
+.avatar-frame {
+    border-radius: 50%;
+    overflow: hidden;
+    width: var(--card-size);
+    height: var(--card-size);
+}
+
+.share-frame {
+    background-color: green;
+    border-radius: 50%;
+    width: calc(var(--card-size) - 15px);
+    height: calc(var(--card-size) - 15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px;
+    cursor:pointer;
+}
+
+.share-img {
+    width: calc(var(--card-size) - 35px);
+}
+
+.share-card {
+    display: flex;
+    flex-direction: row;
+    height: var(--card-size);
+    background-color: var(--dark);
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    /*position: absolute;*/
+    /*left: -20px;*/
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+button {
+    background-color: rgba(0,0,0,0);
+    border: 0;
+    cursor: pointer;
+}
+
+.toggle-off {
+    display: none;
+}

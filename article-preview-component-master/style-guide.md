@@ -25,6 +25,10 @@ The designs were created to the following widths:
 - Family: [Manrope](https://fonts.google.com/specimen/Manrope)
 - Weights: 500, 700
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+</style>
+
 ## Icons
 
 We provide SVGs for the social icons. But please feel free to use a font icon library if you like. Some suggestions can be found below:
