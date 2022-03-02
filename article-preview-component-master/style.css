@@ -6,9 +6,9 @@
 
 :root {
     --dark: hsl(217, 19%, 35%);
-    --dark-alt: hsl(214, 17%, 51%);
+    --dark-alt: #6d7f97;
     --light:hsl(212, 23%, 69%);
-    --light-alt: hsl(210, 46%, 95%)
+    --light-alt: hsl(210, 46%, 95%);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
@@ -16,26 +16,28 @@
 body {
     font-size: 13px;
     font-family: 'Manrope';
+    background-color: var(--light-alt);
+    color: var(--dark);
 }
 
 img {
     width: 100%;
 }
 
-.head-line {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 10px;
+button {
+    background-color: rgba(0,0,0,0);
+    border: 0;
+    cursor: pointer;
 }
 
-.pitch {
-    margin-bottom: 20px;
-}
+/* layout */
 
 .card {
     width: 350px;
     margin: 0 auto;
-    border: 1px solid black;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .hero {
@@ -46,19 +48,34 @@ img {
 }
 
 .copy {
-    padding-left: 20px;
-    padding-right: 20px;
     display: flex;
     flex-direction: column;
 }
 
+.head-line {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 20px 10px 20px;
+}
+
+.pitch {
+    margin: 0 20px 20px 20px;
+}
+
+/* author card */
+
 .author-card {
     display: flex;
     flex-direction: row;
-    --card-size: 55px;
+    --card-size: 75px;
     height: var(--card-size);
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top:10px;
     position: relative;
 }
 
@@ -66,56 +83,53 @@ img {
     object-fit: contain;
 }
 
-.avatar-frame {
+.avatar {
     border-radius: 50%;
     overflow: hidden;
     width: var(--card-size);
     height: var(--card-size);
+    height: 45px;
+    width: 45px;
 }
 
-.share-frame {
-    background-color: green;
+button.toggle-share {
+    background-color: var(--light-alt);
     border-radius: 50%;
-    width: calc(var(--card-size) - 15px);
-    height: calc(var(--card-size) - 15px);
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 0px;
     cursor:pointer;
+    z-index: 100;
 }
 
-.share-img {
-    width: calc(var(--card-size) - 35px);
+img.toggle-share {
+    width: 20px;
+    height: 20px;
 }
+
+/* share card */
 
 .share-card {
+    width:350px;
+    height:75px;
     display: flex;
     flex-direction: row;
-    height: var(--card-size);
     background-color: var(--dark);
     align-items: center;
     justify-content: space-between;
-    width: 350px;
-    /*position: absolute;*/
-    /*left: -20px;*/
     padding-left: 20px;
     padding-right: 20px;
+    margin-top: 10px;
+    position: absolute;
+    left: 0px;
+    display: none;
 }
 
 .left {
     display: flex;
     flex-direction: row;
     align-items: center;
-
-}
-
-button {
-    background-color: rgba(0,0,0,0);
-    border: 0;
-    cursor: pointer;
-}
-
-.toggle-off {
-    display: none;
 }
