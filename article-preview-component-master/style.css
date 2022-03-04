@@ -18,6 +18,10 @@ body {
     font-family: 'Manrope';
     background-color: var(--light-alt);
     color: var(--dark);
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 img {
@@ -132,4 +136,25 @@ img.toggle-share {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+@media (min-width: 900px){
+    .card {
+        width: 800px;
+        height: 250px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .hero {
+        height: unset;
+        margin: unset;
+        width: 400px;
+    }
+
+    .copy {
+        justify-content: center;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
 }
