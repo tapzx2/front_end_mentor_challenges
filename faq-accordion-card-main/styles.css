@@ -1,106 +1,117 @@
 * {
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    /* text */
-    --dark-highlight: hsl(238, 29%, 16%);
-    --color-highlight: hsl(14, 88%, 65%);
-    --dark: hsl(237, 12%, 33%);
-    --medium: hsl(240, 6%, 50%);
+  /* text */
+  --dark-highlight: hsl(238, 29%, 16%);
+  --color-highlight: hsl(14, 88%, 65%);
+  --dark: hsl(237, 12%, 33%);
+  --medium: hsl(240, 6%, 50%);
 
-    /* gradient */
-    --bg-color-one: hsl(273, 75%, 66%);
-    --bg-color-two: hsl(240, 73%, 65%);
+  /* gradient */
+  --bg-color-one: hsl(273, 75%, 66%);
+  --bg-color-two: hsl(240, 73%, 65%);
 
-    /* divs */
-    --light: hsl(240, 5%, 91%);
+  /* divs */
+  --light: rgb(231, 231, 233);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;700;800&display=swap");
 
 body {
-    font-size: 12px;
-    font-family: 'Kumbh Sans';
-    background-color: var(--bg-color-one);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  font-size: 12px;
+  font-family: "Kumbh Sans";
+  background-color: var(--bg-color-one);
+  display: flex;
+  justify-content: center;
+}
 
+hr {
+  border: 0;
+  height: 0;
+  border-top: 0px solid rgba(146, 146, 146, 0);
+  border-bottom: 1px solid var(--light);
+}
+
+.hidden {
+  display: none;
 }
 
 .card {
-    background-color: white;
-    width: 327px;
-    border: 1px solid black;
-    position: relative;
-    border-radius: 23px;
-}
-
-.card::before {
-    content: "";
-    background-image: url(images/illustration-woman-online-mobile.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    display: block;
-    position: absolute;
-    z-index: 1;
-    height: 237px;
-    width: 180px;
-    top: -140px;
-    left: 90px;
-}
-
-h1 {
-    padding-top: 70px;
-    text-align: center;
-    font-size: 32px;
-}
-
-li::after {
-    content:"";
-    border-top: 1px solid var(--light);
-    display: block;
-    width: 250px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  margin-top: 50px;
+  background-color: white;
+  width: 327px;
+  border: 1px solid black;
+  position: relative;
+  border-radius: 23px;
 }
 
 button {
-    background-color: white;
-    border: none;
-    color: var(--dark);
-    border-radius: 10px;
+  background-color: white;
+  border: none;
+  color: var(--dark);
+  border-radius: 10px;
 }
 
 button:hover {
-    cursor: pointer;
-    border: none;
-    color: var(--color-highlight);
+  cursor: pointer;
+  border: none;
+  color: var(--color-highlight);
 }
 
+button:focus-visible {
+  /* https://stackoverflow.com/questions/31402576/enable-focus-only-on-keyboard-use-or-tab-press */
+  color: var(--color-highlight);
+}
+
+/*
+.card::before {
+  content: "";
+  background-image: url(images/illustration-woman-online-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  height: 237px;
+  width: 180px;
+  top: -140px;
+  left: 90px;
+}
+
+h1 {
+  padding-top: 70px;
+  text-align: center;
+  font-size: 32px;
+}
+
+
+
+
+
 button::after {
-    content:"";
-    background-image: url(images/icon-arrow-down.svg);
-    background-repeat: no-repeat;
-    width: 10px;
-    height: 10px;
-    display: inline-block;
+  content: "";
+  background-image: url(images/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
 }
 
 .active {
-    color: var(--dark-highlight);
-    font-weight: 700;
+  color: var(--dark-highlight);
+  font-weight: 700;
 }
 
 .acrd-content {
-    color: var(--medium)
+  color: var(--medium);
 }
 
 .viz-hidden {
-    height: 0;
-    opacity: 0;
+  height: 0;
+  opacity: 0;
 }
+*/

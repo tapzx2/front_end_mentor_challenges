@@ -6,36 +6,49 @@
   <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor | FAQ Accordion Card</title>
 </head>
-<body>
+<body> <!-- after VanJS course, googling not just how to do an acord, but how to do it with accessability
+   https://www.aditus.io/patterns/accordion/
+   https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt
+   https://www.hassellinclusion.com/blog/accessible-accordion-pattern/ -->
+
+
+   <!-- https://css-tricks.com/examples/hrs/ -->
   <div class="card">
     <h1>FAQ</h1>
-    <ul>
-      <li><button>How many team members can I invite?</button>
-        <p class="acrd-content viz-hidden">You can invite up to 2 additional users on the Free plan. There is no limit on 
-          team members for the Premium plan.</p>
-      </li>
-      <li><button>What is the maximum file upload size?</button>
-        <p class="acrd-content viz-hidden">No more than 2GB. All files in your account must fit your allotted storage space.
-        </p>
-      </li>
-      <li><button>How do I reset my password?</button>
-        <p class="acrd-content viz-hidden">Click “Forgot password” from the login page or “Change password” from your profile page.
-          A reset link will be emailed to you.</p>
-      </li>
-      <li>
-        <button>Can I cancel my subscription?</button>
-        <p class="acrd-content viz-hidden">
-          Yes! Send us a message and we'll process your request no questions asked.
-        </p>
-      </li>
-      <li><button>Do you provide additional support?</button>
-        <p class="acrd-content viz-hidden">
-          Chat and email support is available 24/7. Phone lines are open during normal business hours.
-        </p>
-      </li>
-    </ul>
-  </div>
-  </div>
+
+    <h2><button id="accordion-button-01" aria-controls="accordion-panel-01" aria-expanded="false">How many team members can I invite?</button></h2>
+    <div id="accordion-panel-01" aria-labelledby="accordion-button-01" class="accordion-panel hidden">
+      <p>You can invite up to 2 additional users on the Free plan. There is no limit on 
+        team members for the Premium plan.</p>
+    </div>
+    <hr>
+
+    <h2><button id="accordion-button-02" aria-controls="accordion-panel-02" aria-expanded="false">What is the maximum file upload size?</button></h2>
+    <div id="accordion-panel-02" aria-labelledby="accordion-button-02" class="accordion-panel hidden">
+      <p>No more than 2GB. All files in your account must fit your allotted storage space.
+      </p>
+    </div>
+    <hr>
+
+    <h2><button id="accordion-button-03" aria-controls="accordion-panel-03" aria-expanded="false">How do I reset my password?</button></h2>
+    <div id="accordion-panel-03" aria-labelledby="accordion-button-03" class="accordion-panel hidden">
+      <p>Click “Forgot password” from the login page or “Change password” from your profile page.
+        A reset link will be emailed to you.</p>
+    </div>
+    <hr>
+
+    <h2><button id="accordion-button-04" aria-controls="accordion-panel-04" aria-expanded="false">Can I cancel my subscription?</button></h2>
+    <div id="accordion-panel-04" aria-labelledby="accordion-button-04" class="accordion-panel hidden">
+      <p>Yes! Send us a message and we'll process your request no questions asked.</p>
+    </div>
+    <hr>
+
+    <h2><button id="accordion-button-05" aria-controls="accordion-panel-05" aria-expanded="false">Do you provide additional support?</button></h2>
+    <div id="accordion-panel-05" aria-labelledby="accordion-button-05" class="accordion-panel hidden">
+      <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+    </div>
+    <hr>
+
   <script src="script.js"></script>
 </body>
 </html>
