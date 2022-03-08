@@ -1,54 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="styles.css">
-  <title>Frontend Mentor | FAQ Accordion Card</title>
-</head>
-<body> <!-- after VanJS course, googling not just how to do an acord, but how to do it with accessability
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+  </head>
+  <body>
+    <!-- after VanJS course, googling not just how to do an acord, but how to do it with accessability
    https://www.aditus.io/patterns/accordion/
    https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt
    https://www.hassellinclusion.com/blog/accessible-accordion-pattern/ -->
 
+    <!-- https://css-tricks.com/examples/hrs/ -->
+    <div class="card">
+      <h1>FAQ</h1>
 
-   <!-- https://css-tricks.com/examples/hrs/ -->
-  <div class="card">
-    <h1>FAQ</h1>
+      <h2>
+        <button
+          id="accordion-button-01"
+          aria-controls="accordion-panel-01"
+          aria-expanded="false"
+        >
+          How many team members can I invite?
+        </button>
+        <svg width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
+      </h2>
+      <div
+      id="accordion-panel-01"
+      aria-labelledby="accordion-button-01"
+      class="accordion-panel hidden"
+    >
+      <p>
+        You can invite up to 2 additional users on the Free plan. There is no
+        limit on team members for the Premium plan.
+      </p>
+      </div>
+    <hr />
 
-    <h2><button id="accordion-button-01" aria-controls="accordion-panel-01" aria-expanded="false">How many team members can I invite?</button></h2>
-    <div id="accordion-panel-01" aria-labelledby="accordion-button-01" class="accordion-panel hidden">
-      <p>You can invite up to 2 additional users on the Free plan. There is no limit on 
-        team members for the Premium plan.</p>
-    </div>
-    <hr>
+    <h2>
+      <button
+        id="accordion-button-02"
+        aria-controls="accordion-panel-02"
+        aria-expanded="false"
+      >
+        What is the maximum file upload size?
+      </button>
+      <svg width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
 
-    <h2><button id="accordion-button-02" aria-controls="accordion-panel-02" aria-expanded="false">What is the maximum file upload size?</button></h2>
-    <div id="accordion-panel-02" aria-labelledby="accordion-button-02" class="accordion-panel hidden">
-      <p>No more than 2GB. All files in your account must fit your allotted storage space.
+    </h2>
+    <div
+      id="accordion-panel-02"
+      aria-labelledby="accordion-button-02"
+      class="accordion-panel hidden"
+    >
+      <p>
+        No more than 2GB. All files in your account must fit your allotted
+        storage space.
       </p>
     </div>
-    <hr>
+    <hr />
 
-    <h2><button id="accordion-button-03" aria-controls="accordion-panel-03" aria-expanded="false">How do I reset my password?</button></h2>
-    <div id="accordion-panel-03" aria-labelledby="accordion-button-03" class="accordion-panel hidden">
-      <p>Click “Forgot password” from the login page or “Change password” from your profile page.
-        A reset link will be emailed to you.</p>
+    <h2>
+      <button
+        id="accordion-button-03"
+        aria-controls="accordion-panel-03"
+        aria-expanded="false"
+      >
+        How do I reset my password?
+      </button>
+      <svg width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
+
+    </h2>
+    <div
+      id="accordion-panel-03"
+      aria-labelledby="accordion-button-03"
+      class="accordion-panel hidden"
+    >
+      <p>
+        Click “Forgot password” from the login page or “Change password” from
+        your profile page. A reset link will be emailed to you.
+      </p>
     </div>
-    <hr>
+    <hr />
 
-    <h2><button id="accordion-button-04" aria-controls="accordion-panel-04" aria-expanded="false">Can I cancel my subscription?</button></h2>
-    <div id="accordion-panel-04" aria-labelledby="accordion-button-04" class="accordion-panel hidden">
-      <p>Yes! Send us a message and we'll process your request no questions asked.</p>
+    <h2>
+      <button
+        id="accordion-button-04"
+        aria-controls="accordion-panel-04"
+        aria-expanded="false"
+      >
+        Can I cancel my subscription?
+      </button>
+      <svg width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
+
+    </h2>
+    <div
+      id="accordion-panel-04"
+      aria-labelledby="accordion-button-04"
+      class="accordion-panel hidden"
+    >
+      <p>
+        Yes! Send us a message and we'll process your request no questions
+        asked.
+      </p>
     </div>
-    <hr>
+    <hr />
 
-    <h2><button id="accordion-button-05" aria-controls="accordion-panel-05" aria-expanded="false">Do you provide additional support?</button></h2>
-    <div id="accordion-panel-05" aria-labelledby="accordion-button-05" class="accordion-panel hidden">
-      <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+    <h2>
+      <button
+        id="accordion-button-05"
+        aria-controls="accordion-panel-05"
+        aria-expanded="false"
+      >
+        Do you provide additional support?
+      </button>
+      <svg width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
+
+    </h2>
+    <div
+      id="accordion-panel-05"
+      aria-labelledby="accordion-button-05"
+      class="accordion-panel hidden"
+    >
+      <p>
+        Chat and email support is available 24/7. Phone lines are open during
+        normal business hours.
+      </p>
     </div>
-    <hr>
+    <hr />
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

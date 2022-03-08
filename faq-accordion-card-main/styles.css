@@ -6,7 +6,8 @@
 
 :root {
   /* text */
-  --dark-highlight: hsl(238, 29%, 16%);
+
+  --dark-highlight: #1d1e35;
   --color-highlight: hsl(14, 88%, 65%);
   --dark: hsl(237, 12%, 33%);
   --medium: hsl(240, 6%, 50%);
@@ -17,6 +18,10 @@
 
   /* divs */
   --light: rgb(231, 231, 233);
+}
+
+img {
+  width: 100%;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;700;800&display=swap");
@@ -34,6 +39,7 @@ hr {
   height: 0;
   border-top: 0px solid rgba(146, 146, 146, 0);
   border-bottom: 1px solid var(--light);
+  margin-bottom: 18px;
 }
 
 .hidden {
@@ -41,12 +47,15 @@ hr {
 }
 
 .card {
-  margin-top: 50px;
+  margin-top: 148px;
+  margin-bottom: 40px;
   background-color: white;
   width: 327px;
-  border: 1px solid black;
   position: relative;
   border-radius: 23px;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-shadow: 0px 50px 50px -20px #35127a7f;
 }
 
 button {
@@ -67,7 +76,6 @@ button:focus-visible {
   color: var(--color-highlight);
 }
 
-/*
 .card::before {
   content: "";
   background-image: url(images/illustration-woman-online-mobile.svg);
@@ -76,21 +84,42 @@ button:focus-visible {
   display: block;
   position: absolute;
   z-index: 1;
-  height: 237px;
-  width: 180px;
-  top: -140px;
-  left: 90px;
+  width: 237px;
+  height: 180px;
+  top: -100px;
+  left: 50px;
 }
 
 h1 {
-  padding-top: 70px;
+  margin-top: 132px;
+  margin-bottom: 30px;
   text-align: center;
   font-size: 32px;
+  color: var(--dark-highlight);
 }
 
+h2 {
+  margin-bottom: 18px;
+}
 
+p {
+  margin-bottom: 16px;
+  color: var(--medium);
+}
 
+svg {
+  float: right;
+  margin-top: 10px;
+}
 
+/* would like to select data attribute area-exapanded = "True" but no internet right now to look up how to do" */
+
+.active {
+  color: var(--dark-highlight);
+  font-weight: 700;
+}
+
+/*
 
 button::after {
   content: "";
@@ -101,10 +130,6 @@ button::after {
   display: inline-block;
 }
 
-.active {
-  color: var(--dark-highlight);
-  font-weight: 700;
-}
 
 .acrd-content {
   color: var(--medium);
