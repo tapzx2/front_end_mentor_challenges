@@ -135,7 +135,12 @@ svg {
 }
 
 @media (min-width: 1000px) {
+  .relative-wrap {
+    position: relative;
+  }
+
   .card {
+    position: relative;
     width: 920px;
     padding-left: 475px;
     padding-right: 111px;
@@ -166,34 +171,13 @@ svg {
     text-align: left;
   }
 
-  svg.hidden {
-    display: block;
+  .no-overflow {
     position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
     z-index: 3;
     top: 335px;
     left: -100px;
-    overflow: visible;
   }
 }
-
-/*
-
-button::after {
-  content: "";
-  background-image: url(images/icon-arrow-down.svg);
-  background-repeat: no-repeat;
-  width: 10px;
-  height: 10px;
-  display: inline-block;
-}
-
-
-.acrd-content {
-  color: var(--medium);
-}
-
-.viz-hidden {
-  height: 0;
-  opacity: 0;
-}
-*/

@@ -1,0 +1,32 @@
+.relative-wrap {
+  /*relative on second parent*/
+  position: relative;
+}
+
+.overflow-wrap {
+  height: 250px;
+  width: 250px;
+  overflow: hidden;
+  background: lightblue;
+
+  /*no relative on immediate parent*/
+}
+
+.respect-overflow {
+  position: relative;
+  top: 75px;
+  left: 225px;
+  height: 50px;
+  width: 50px;
+  background: green;
+}
+.no-overflow {
+  position: absolute;
+  background-image: url(images/illustration-box-desktop.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 150px;
+  left: 225px;
+  height: 50px;
+  width: 50px;
+}
