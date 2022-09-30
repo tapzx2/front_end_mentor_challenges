@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.request::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: var(--mid-dark);
+  top: -5px;
+  left: -6px;
+  height: 56px;
+  width: 100px;
+  transform: translateZ(
+    -1px
+  ); /* https://stackoverflow.com/questions/3032856/is-it-possible-to-set-the-stacking-order-of-pseudo-elements-below-their-parent-e */
+}
+.message {
+  position: relative;
+}
+.message::after {
+  position: absolute;
+  content: "Oops! Please check your email";
+  display: block;
+  position: absolute;
+  color: var(--alert);
+  top: 65px;
+  left: 30px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.invalid:invalid {
+  background-color: var(--mid-dark);
+}

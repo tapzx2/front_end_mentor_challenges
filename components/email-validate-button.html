@@ -1,0 +1,115 @@
+<form novalidate class="box form" action="#">
+  <!--https://stackoverflow.com/questions/17808555/how-to-prevent-browser-trying-to-auto-validate-email-address-field-->
+  <input
+    class="form-input"
+    type="email"
+    name=""
+    id=""
+    placeholder="Email address"
+  />
+  <button class="request">Request Access</button>
+
+  <script>
+    console.log("start email-validate-button");
+
+    const form = document.querySelector(".form");
+    const formInput = document.querySelector(".form-input");
+    const submit = document.querySelector(".request");
+    var mailformat =
+      /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+    /* using html5 spec https://stackoverflow.com/questions/46155/whats-the-best-way-to-validate-an-email-address-in-javascript */
+
+    submit.onclick = function () {
+      if (formInput.value.match(mailformat)) {
+        console.log("do nothing");
+        /* do nothing */
+      } else {
+        formInput.classList.add("invalid");
+        form.classList.add("message");
+        console.log("do something");
+      }
+    };
+
+    document.addEventListener("keydown", function (event) {
+      if (
+        event.target.matches(".form-input") ||
+        event.target.matches(".form")
+      ) {
+        formInput.classList.remove("invalid");
+        form.classList.remove("message");
+      }
+    });
+  </script>
+
+  <style>
+    /*
+    .form {
+      flex-direction: row;
+      width: 427px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    */
+
+    .form-input {
+      /*
+      width: 320px;
+      height: 56px;
+      margin-bottom: 0px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;*/
+      position: relative;
+    }
+
+    .request {
+      /* style and move around the request button */
+      /*
+      width: 162px;
+      height: 46px;
+      box-sizing: content-box;
+      border: 5px solid var(--mid-dark);
+      position: relative;
+      transform-style: preserve-3d;
+      */
+    }
+
+    /* I think this is to do if you want to put button inside form area */
+    /* https://stackoverflow.com/questions/3032856/is-it-possible-to-set-the-stacking-order-of-pseudo-elements-below-their-parent-e */
+    /*
+    .request::after {
+      content: "";
+      display: block;
+      position: absolute;
+      background: var(--mid-dark);
+
+      top: -5px;
+      left: -6px;
+      height: 56px;
+      width: 100px;
+      transform: translateZ(
+        -1px
+      );
+    }*/
+
+    .message {
+      position: relative;
+    }
+    .message::after {
+      position: absolute;
+      content: "Oops! Please check your email";
+      display: block;
+      /* message location */
+      top: unset;
+      left: unset;
+      color: unset;
+      /* message style */
+      font-size: unset;
+      line-height: unset;
+    }
+
+    .invalid:invalid {
+      /* when invalid set bg color of input */
+      background-color: unset;
+    }
+  </style>
+</form>
